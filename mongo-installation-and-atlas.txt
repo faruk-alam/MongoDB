@@ -1,0 +1,21 @@
+
+MongoDB installation manuals:
+Windows: https://www.mongodb.com/docs/manual/t...
+MacOS: https://www.mongodb.com/docs/manual/t...
+Linux: https://www.mongodb.com/docs/manual/a...
+Docker: https://www.mongodb.com/docs/manual/d...
+
+vs code -
+install mongodb extension 
+
+download and install
+MondoDB compass
+
+MongoDB atlas account :
+UserName/email : outlook id
+password : Mongodb.81
+For string connection - 
+UserName : farukalam
+password : mongo1234
+
+

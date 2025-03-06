@@ -1,0 +1,55 @@
+to see current databases list
+show dbs
+
+to create/use/switch a database
+use <database name>
+Ex :
+use test
+
+to create a collection into database 
+db.createCollection("<collection name>")
+Ex :
+db.createCollection("students")
+
+to see all collections
+show collections
+
+
+to insert a document into collection
+db.<collection name>.insertOne({<key>: <value>, <key>: <value>})
+Ex :
+db.users.insertOne({name: "John", age: 30})
+
+to insert multiple documents
+db.<collection name>.insertMany([{<key>: <value>, <key>: <value>}, 
+                                 {<key>: <value>, <key>: <value>}, 
+                                 ...])
+Ex :
+db.users.insertMany([
+    {name: "John", age: 30},
+    {name: "Jane", age: 25},
+    {name: "Bob", age: 35}
+])
+
+to find documents
+db.<collection name>.find()
+Ex :
+db.users.find()
+
+to find documents with a specific condition
+db.users.find({name: "John"})
+
+to update a document
+db.users.updateOne({name: "John"}, {$set: {age: 31}})
+
+to delete a document
+db.users.deleteOne({name: "John"})
+
+to delete a collection
+db.users.drop()
+
+to drop a database
+db.dropDatabase()
+
+to exit mongo
+exit

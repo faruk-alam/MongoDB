@@ -20,6 +20,7 @@ db.<collection name>.insertOne({<key>: <value>, <key>: <value>})
 Ex :
 db.users.insertOne({name: "John", age: 30})
 
+
 to insert multiple documents
 db.<collection name>.insertMany([{<key>: <value>, <key>: <value>}, 
                                  {<key>: <value>, <key>: <value>}, 
@@ -29,15 +30,47 @@ db.users.insertMany([
     {name: "John", age: 30},
     {name: "Jane", age: 25},
     {name: "Bob", age: 35}
+
 ])
+
+mongodb data type :
+String, Number, Date, Object, Array, Boolean, Null, Undefined, ObjectID, BinData, MaxKey, MinKey
+Ex :
+{
+    name: "Alex",
+    age: 30, 
+    dateOfBirth: new Date(), 
+    isActive: true, 
+    CarModel: null,
+    address: {street: "123 Main St", city: "New York"}, 
+    hobbies: ["reading", "swimming"]
+
+    }
 
 to find documents
 db.<collection name>.find()
 Ex :
 db.users.find()
 
-to find documents with a specific condition
-db.users.find({name: "John"})
+to sort documents
+db.<collection name>.find().sort({<key>: 1}) // 1 for ascending order, -1 for descending order
+Ex :
+db.users.find().sort({age: 1})
+
+to limit the number of documents returned
+db.<collection name>.find().limit(<number>)
+Ex :
+db.users.find().limit(2)
+
+to sort and limit documents togather
+db.<collection name>.find().sort({<key>: 1}).limit(<number>)
+Ex :
+db.users.find().sort({age: 1}).limit(2)
+
+find method with a specific condition
+db.<collection name>.find({<key>: <value>})
+Ex :
+db.users.find({age: 30})
 
 to update a document
 db.users.updateOne({name: "John"}, {$set: {age: 31}})

@@ -72,6 +72,11 @@ db.<collection name>.find({<key>: <value>})
 Ex :
 db.users.find({age: 30})
 
+find({query}, {projection})
+db.<collection name>.find({<key>: <value>}, {name: 1, age: 1})
+Ex :
+db.users.find({age: 30}, {name: 1, age: 1})
+
 to update a document
 db.users.updateOne({name: "John"}, {$set: {age: 31}})
 

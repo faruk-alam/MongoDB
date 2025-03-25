@@ -78,10 +78,55 @@ Ex :
 db.users.find({age: 30}, {name: 1, age: 1})
 
 to update a document
+db.<collection name>.updateOne({filter},{update})
+Ex :
 db.users.updateOne({name: "John"}, {$set: {age: 31}})
 
+to update multiple documents
+db.<collection name>.updateMany({filter},{update})
+Ex :
+db.users.updateMany({age: 30}, {$set: {age: 31}})
+
+to update multiple with $exits method
+db.<collection name>.updateMany({filter},{update})
+Ex :
+db.users.updateMany({age: {$exists: false}}, {$set: {age: 31}})
+
 to delete a document
+db.<collection name>.deleteOne({filter})
+Ex:
 db.users.deleteOne({name: "John"})
+
+to delete multiple document
+db.<collection name>.deleteMany({filter})
+Ex:
+db.users.deleteMany({age: 31})
+
+comparsion query operators
+Comparsion operators returns data based on value comparsions.
+$eq, $ne, $gt, $gte, $lt, $lte, $in, $nin, $exists, $type
+Ex:
+db.users.find({age: {$gt: 30}})
+
+Logical query operators
+Logical operators performs logical comparsions using logical operators.
+$and, $or, $not, $nor
+Ex:
+db.users.find({$or: [{age: 30}, {age: 31}]})
+
+Array query operators
+Array query operators returns data based on array comparsions.
+$all, $elemMatch, $size
+Ex:
+db.users.find({hobbies: {$all: ["reading", "swimming"]}})
+
+Text search
+Text search is used to search text data. It is used to search text fields.
+$regex, $text
+Ex:
+db.users.find({name: {$regex: "John"}})
+
+
 
 to delete a collection
 db.users.drop()

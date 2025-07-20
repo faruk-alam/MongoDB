@@ -16,6 +16,6 @@ UserName/email : outlook id
 password : Mongodb.81
 For string connection - 
 UserName : farukalam
-password : mongo1234
+password : mymongo
 
 

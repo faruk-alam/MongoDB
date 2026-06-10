@@ -5,6 +5,9 @@ MacOS: https://www.mongodb.com/docs/manual/t...
 Linux: https://www.mongodb.com/docs/manual/a...
 Docker: https://www.mongodb.com/docs/manual/d...
 
+MongoDB installation 
+MongoShell installation
+Set Environment variable PATH
 vs code -
 install mongodb extension 
 
